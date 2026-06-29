@@ -12,11 +12,11 @@
             theme: {
                 extend: {
                     colors: {
-                        togoGreen: '#084F34',   /* Vert Forêt de Kpalimé */
-                        togoSafran: '#F59E0B',  /* Jaune Safran des marchés */
-                        togoEarth: '#C2410C',   /* Terre rouge latérite */
-                        togoSand: '#FCFAF7',    /* Sable chaud de Lomé */
-                        togoDark: '#121F1A',    /* Vert-noir profond */
+                        logoBlue: '#212E53',     /* Bleu Sombre Premium (Dominant) */
+                        logoEmerald: '#059669',  /* Vert Émeraude Éclatant (Dominant) */
+                        togoSafran: '#F59E0B',   /* Jaune Safran des Zems (Accents) */
+                        togoEarth: '#C2410C',    /* Terre rouge latérite */
+                        togoSand: '#FCFAF7',     /* Teinte de fond sable chaud */
                     },
                     fontFamily: {
                         syne: ['Syne', 'sans-serif'],
@@ -97,84 +97,90 @@
         }
     </style>
 </head>
-<body class="bg-togoSand text-togoDark antialiased overflow-x-hidden afro-pattern">
+<body class="bg-togoSand text-logoBlue antialiased overflow-x-hidden afro-pattern">
 
-    <!-- BARRE DE NAVIGATION FLOTTANTE & ÉPURÉE -->
+    <!-- BARRE DE NAVIGATION FLOTTANTE & ÉPURÉE (DOMINÉE PAR LES COULEURS DU LOGO) -->
     <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300 py-4 px-4 sm:px-8">
-        <nav class="max-w-7xl mx-auto bg-white/90 backdrop-blur-lg border border-togoGreen/10 rounded-full py-3.5 px-6 flex justify-between items-center shadow-lg shadow-togoGreen/5">
+        <nav class="max-w-7xl mx-auto afro-pattern bg-togoSand/90 backdrop-blur-lg border border-logoBlue/10 rounded-full py-3.5 px-6 flex justify-between items-center shadow-lg shadow-logoBlue/5">
             
-            <!-- Logo aux vibes togolaises -->
+            <!-- Logo avec les couleurs du logo (ZT) -->
             <a href="#" class="flex items-center space-x-3 group">
-                <div class="w-10 h-10 bg-togoGreen rounded-organic-1 flex items-center justify-center text-togoSafran font-black text-lg shadow-md shadow-togoGreen/20 transition-transform duration-300 group-hover:rotate-12">
+                <div class="w-10 h-10 bg-logoBlue rounded-organic-1 flex items-center justify-center text-logoEmerald font-black text-lg shadow-md shadow-logoBlue/20 transition-transform duration-300 group-hover:rotate-12">
                     ZT
                 </div>
-                <span class="text-xl font-bold tracking-tight title-font">
-                    Zem<span class="text-togoEarth">.</span><span class="text-togoSafran">Tontine</span>
+                <span class="text-xl font-bold tracking-tight title-font text-logoBlue">
+                    Zem<span class="text-togoEarth">.</span><span class="text-logoEmerald">Tontine</span>
                 </span>
             </a>
             
             <!-- Liens de navigation (Desktop) -->
-            <div class="hidden lg:flex space-x-8 text-sm font-semibold text-togoDark/80">
-                <a href="#concept" class="hover:text-togoGreen transition-all hover:translate-y-[-1px] duration-200">Le Concept</a>
-                <a href="#simulateur" class="hover:text-togoGreen transition-all hover:translate-y-[-1px] duration-200">Calculer mon Score</a>
-                <a href="#impact" class="hover:text-togoGreen transition-all hover:translate-y-[-1px] duration-200">Qui sommes-nous ?</a>
-                <a href="#faq" class="hover:text-togoGreen transition-all hover:translate-y-[-1px] duration-200">Questions fréquentes</a>
+            <div class="hidden lg:flex space-x-8 text-sm font-semibold text-logoBlue/85">
+                <a href="#concept" class="hover:text-logoEmerald transition-all hover:translate-y-[-1px] duration-200">Le Concept</a>
+                <a href="#simulateur" class="hover:text-logoEmerald transition-all hover:translate-y-[-1px] duration-200">Calculer mon Score</a>
+                <a href="#impact" class="hover:text-logoEmerald transition-all hover:translate-y-[-1px] duration-200">Qui sommes-nous ?</a>
+                <a href="#faq" class="hover:text-logoEmerald transition-all hover:translate-y-[-1px] duration-200">Questions fréquentes</a>
             </div>
             
-            <!-- CTA & Burger mobile -->
+            <!-- CTA Vert émeraude & Burger mobile -->
             <div class="flex items-center space-x-4">
-                <a href="#telecharger" class="hidden sm:inline-flex bg-togoGreen hover:bg-togoDark text-white text-xs md:text-sm font-bold px-6 py-2.5 rounded-full shadow-md shadow-togoGreen/10 transition-all duration-300 hover:scale-105">
+                <a href="#telecharger" class="hidden sm:inline-flex bg-logoEmerald hover:bg-logoBlue text-white text-xs md:text-sm font-bold px-6 py-2.5 rounded-full shadow-md shadow-logoEmerald/10 transition-all duration-300 hover:scale-105">
                     Rejoindre la Tontine
                 </a>
                 
                 <!-- Bouton Burger Mobile -->
-                <button id="mobileMenuBtn" class="lg:hidden w-10 h-10 flex flex-col justify-center items-center gap-1.5 focus:outline-none bg-togoSand rounded-full text-togoGreen">
-                    <span class="w-5 h-0.5 bg-togoGreen transition-all duration-300 rounded-full" id="line1"></span>
-                    <span class="w-5 h-0.5 bg-togoGreen transition-all duration-300 rounded-full" id="line2"></span>
-                    <span class="w-5 h-0.5 bg-togoGreen transition-all duration-300 rounded-full" id="line3"></span>
+                <button id="mobileMenuBtn" class="lg:hidden w-10 h-10 flex flex-col justify-center items-center gap-1.5 focus:outline-none bg-togoSand/80 rounded-full text-logoBlue">
+                    <span class="w-5 h-0.5 bg-logoBlue transition-all duration-300 rounded-full" id="line1"></span>
+                    <span class="w-5 h-0.5 bg-logoBlue transition-all duration-300 rounded-full" id="line2"></span>
+                    <span class="w-5 h-0.5 bg-logoBlue transition-all duration-300 rounded-full" id="line3"></span>
                 </button>
             </div>
         </nav>
         
         <!-- Menu Mobile de type Drawer Organique -->
-        <div id="mobileMenu" class="hidden fixed inset-x-4 top-24  text-togoSand rounded-asym-md p-8 shadow-2xl z-40 border border-white/10 transition-all duration-300">
+        <div id="mobileMenu" class="hidden fixed inset-x-4 top-24 afro-pattern bg-logoBlue text-togoSand rounded-asym-md p-8 shadow-2xl z-40 border border-white/10 transition-all duration-300">
             <div class="flex flex-col space-y-6 text-center text-lg font-bold title-font">
-                <a href="#concept" class="hover:text-togoSafran transition-colors duration-200">Le Concept</a>
-                <a href="#simulateur" class="hover:text-togoSafran transition-colors duration-200">Calculer mon Score</a>
-                <a href="#impact" class="hover:text-togoSafran transition-colors duration-200">Qui sommes-nous ?</a>
-                <a href="#faq" class="hover:text-togoSafran transition-colors duration-200">Des questions ?</a>
+                <a href="#concept" class="hover:text-logoEmerald transition-colors duration-200">Le Concept</a>
+                <a href="#simulateur" class="hover:text-logoEmerald transition-colors duration-200">Calculer mon Score</a>
+                <a href="#impact" class="hover:text-logoEmerald transition-colors duration-200">Qui sommes-nous ?</a>
+                <a href="#faq" class="hover:text-logoEmerald transition-colors duration-200">Des questions ?</a>
                 <hr class="border-white/10 my-2">
-                <a href="#telecharger" class="bg-togoSafran hover:bg-white text-togoDark font-black px-6 py-3.5 rounded-full transition-all duration-300">
+                <a href="#telecharger" class="bg-logoEmerald hover:bg-white text-white hover:text-logoBlue font-black px-6 py-3.5 rounded-full transition-all duration-300">
                     Rejoindre la Tontine
                 </a>
             </div>
         </div>
     </header>
 
-    <!-- SECTION HERO (L'ACCUEIL CHALEUREUX ET VIVANT) -->
-    <section id="concept" class="relative pt-32 pb-24 px-4 sm:px-8 lg:px-12 overflow-hidden min-h-screen    flex items-center">
+    <!-- SECTION HERO (L'ACCUEIL AVEC IMAGE EN ARRIÈRE-PLAN SUPERPOSÉE) -->
+    <section id="concept" class="relative pt-32 pb-24 px-4 sm:px-8 lg:px-12 overflow-hidden min-h-screen bg-Hero-image flex items-center">
         
-       
+        <!-- Formes géométriques d'arrière-plan -->
+        <div class="absolute -top-12 -right-12 w-96 h-96 bg-logoEmerald/10 rounded-organic-1 blur-3xl z-0 pointer-events-none"></div>
+        <div class="absolute bottom-10 -left-20 w-[500px] h-[500px] bg-logoBlue/5 rounded-organic-2 blur-3xl z-0 pointer-events-none"></div>
+        
+        <div class="absolute top-20 right-10 lg:right-40 w-44 h-44 border border-togoEarth/10 rounded-full animate-spin-slow flex items-center justify-center opacity-30">
+            <div class="w-36 h-36 border-4 border-dashed border-logoEmerald/20 rounded-full"></div>
+        </div>
 
         <div class="relative z-10 max-w-7xl mx-auto grid lg:grid-cols-12 gap-12 lg:gap-8 items-center w-full">
             
             <!-- BLOC TEXTE À GAUCHE -->
-            <div class="lg:col-span-7 space-y-8 text-center lg:text-left" data-aos="fade-up" data-aos-duration="1000">
-                
-          
+            <div class="lg:col-span-7 space-y-8 text-center lg:text-left" data-aos="fade-right" data-aos-duration="1000">
+                <div class="inline-flex items-center space-x-2 bg-logoEmerald/10 border border-logoEmerald/20 px-4 py-2 rounded-full text-logoEmerald font-bold text-xs uppercase tracking-widest">
+                    <span class="w-2 h-2 rounded-full bg-togoEarth animate-ping"></span>
+                    <span>Woezon (Bienvenue) au Togo</span>
+                </div>
 
-                <!-- Titre expressif -->
-                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-togoDark leading-[1.1] tracking-tight title-font">
-                    Faites grandir votre argent au rythme de <span class="text-togoGreen underline decoration-togoSafran decoration-wavy decoration-2">vos ambitions</span> locales.
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-logoBlue leading-[1.1] tracking-tight title-font">
+                    Faites grandir votre argent au rythme de <span class="text-logoEmerald underline decoration-togoSafran decoration-wavy decoration-2">vos ambitions</span> locales.
                 </h1>
                 
-                <p class="text-togoDark/80 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto lg:mx-0">
-                    Plus besoin de risquer vos recettes ou d'attendre le passage du tontinier. Épargnez en toute sécurité au Togo via <strong class="text-togoGreen">TMoney</strong> et <strong class="text-togoEarth">Moov Money</strong>, et débloquez instantanément vos microcrédits.
+                <p class="text-logoBlue/80 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                    Plus besoin de risquer vos recettes ou d'attendre le passage du tontinier. Épargnez en toute sécurité au Togo via <strong class="text-logoEmerald">TMoney</strong> et <strong class="text-togoEarth">Moov Money</strong>, et débloquez instantanément vos microcrédits.
                 </p>
                 
-                <!-- Actions de Téléchargement & USSD -->
-                <div id="telecharger" class="pt-4 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center">
-                    <button class="w-full sm:w-auto bg-togoGreen hover:bg-togoDark text-white flex items-center justify-center space-x-3 px-8 py-4 rounded-asym-md transition-all duration-300 hover:scale-105 shadow-xl shadow-togoGreen/15">
+                <div class="pt-4 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center">
+                    <button class="w-full sm:w-auto bg-logoBlue hover:bg-logoEmerald text-white flex items-center justify-center space-x-3 px-8 py-4 rounded-asym-md transition-all duration-300 hover:scale-105 shadow-xl shadow-logoBlue/15">
                         <span class="text-2xl text-togoSafran"><i class="fa-brands fa-android"></i></span>
                         <div class="text-left">
                             <p class="text-[9px] text-white/60 uppercase tracking-widest font-semibold">Télécharger l'app</p>
@@ -182,144 +188,228 @@
                         </div>
                     </button>
                     
-                    <!-- Bloc USSD avec forme organique asymétrique -->
-                    <div class="w-full sm:w-auto bg-white border border-togoGreen/10 px-6 py-3.5 rounded-asym-md shadow-md text-center sm:text-left flex items-center justify-center space-x-3">
+                    <div class="w-full sm:w-auto bg-white border border-logoBlue/10 px-6 py-3.5 rounded-asym-md shadow-md text-center sm:text-left flex items-center justify-center space-x-3">
                         <span class="text-2xl text-togoEarth"><i class="fa-solid fa-mobile-screen-button"></i></span>
                         <div class="text-xs">
-                            <p class="text-togoDark/60 font-medium">Sans connexion Internet ?</p>
-                            <p class="font-extrabold text-togoGreen text-sm tracking-wide">Composez le *567#</p>
+                            <p class="text-logoBlue/60 font-medium">Sans connexion Internet ?</p>
+                            <p class="font-extrabold text-logoEmerald text-sm tracking-wide">Composez le *567#</p>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- BLOC VISUEL DYNAMIQUE À DROITE (SMARTPHONE TOUT EN FORMES) -->
+            <!-- BLOC VISUEL DYNAMIQUE À DROITE (MOCKUP COPIÉ DE L'INTERFACE TONTINE RÉELLE) -->
             <div class="lg:col-span-5 relative flex justify-center mt-8 lg:mt-0" data-aos="zoom-in" data-aos-duration="1200">
                 
-                <!-- Aura de Soleil en fond de l'appareil -->
-                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-gradient-to-tr from-togoSafran/20 to-togoEarth/20 rounded-organic-2 blur-2xl opacity-80 animate-pulse-subtle"></div>
-                
-                <!-- Cadre de Silhouette de Masque / Décoration Culturelle Flottante -->
-                <div class="absolute -top-10 -right-6 w-16 h-16 bg-togoEarth text-white flex items-center justify-center rounded-organic-3 shadow-lg transform rotate-12 text-xl animate-float-slow">
-                    🌴
-                </div>
+                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-gradient-to-tr from-logoEmerald/20 to-togoSafran/20 rounded-organic-2 blur-2xl opacity-80 animate-pulse-subtle"></div>
 
-                <!-- MOCKUP SMARTPHONE AVEC CONTOURS ARRONDIS ÉPURÉS -->
-                <div class="relative w-72 h-[520px] bg-togoDark rounded-[40px] shadow-2xl shadow-togoDark/40 border-[8px] border-togoDark p-5 text-white flex flex-col justify-between overflow-hidden">
+                <!-- SMARTPHONE AVEC L'INTERFACE IDENTIQUE DU TABLEAU DE BORD (ADAPTÉ AUX COULEURS LOGO) -->
+                <div class="relative w-72 h-[520px] bg-slate-900 rounded-[40px] shadow-2xl shadow-logoBlue/40 border-[8px] border-logoBlue text-slate-800 flex flex-col justify-between overflow-hidden">
                     
-                    <!-- Dynamic Island épurée -->
-                    <div class="absolute top-3 left-1/2 -translate-x-1/2 w-24 h-4 bg-black rounded-full z-20"></div>
+                    <!-- Barre d'état factuelle / Dynamic Island -->
+                    <div class="absolute top-2.5 left-1/2 -translate-x-1/2 w-24 h-4 bg-black rounded-full z-30"></div>
 
-                    <!-- Fond interne d'application à dégradé fluide -->
-                    <div class="absolute inset-0 bg-gradient-to-b from-togoGreen via-togoDark to-togoDark z-0 opacity-95"></div>
-                    
-                    <!-- En-tête de l'application -->
-                    <div class="relative z-10 flex justify-between items-center text-[10px] text-togoSafran font-bold tracking-wider pt-3">
-                        <span>Zem-Tontine App</span>
-                        <div class="flex items-center space-x-1">
-                            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-ping"></span>
-                            <span class="text-[9px] text-emerald-400 font-semibold">Togo en ligne</span>
-                        </div>
-                    </div>
-                    
-                    <!-- Jauge circulaire de Score (Style Bracelet Tontine) -->
-                    <div class="relative z-10 text-center my-auto py-4 flex flex-col items-center justify-center">
-                        <div class="inline-flex items-center space-x-1 bg-togoSafran text-togoDark font-black text-[9px] px-3 py-1 rounded-full uppercase tracking-wider mb-5 shadow-md">
-                            <span>🦺</span> <span>Zem Certifié</span>
-                        </div>
+                    <!-- Corps de l'application -->
+                    <div class="flex-1 flex flex-col bg-[#F8F9FA] overflow-y-auto scrollbar-none text-left z-10 pt-6">
                         
-                        <!-- Le Cercle de Tontine Sacré -->
-                        <div class="relative w-36 h-36 flex items-center justify-center rounded-full border-4 border-togoSafran/20 bg-white/5 backdrop-blur-sm shadow-inner mb-4">
-                            <!-- Arc de cercle de chargement rotatif -->
-                            <div class="absolute inset-0 rounded-full border-4 border-t-togoSafran border-r-togoSafran/50 border-l-transparent border-b-transparent animate-spin-slow"></div>
-                            
-                            <div class="text-center">
-                                <p class="text-[9px] uppercase tracking-widest text-togoSand/60 font-bold">Confiance</p>
-                                <div class="text-5xl font-extrabold text-togoSafran title-font">94</div>
-                                <p class="text-[9px] text-togoSand/40 font-medium">/100 PTS</p>
+                        <!-- Zone Bleue d'en-tête (Dashboard "Utilisateur") - Utilisant la couleur logo #212E53 -->
+                        <div class="bg-[#212E53] text-white px-4 pt-4 pb-8 rounded-b-[24px] relative">
+                            <!-- Barre de statut réseau et heure -->
+                            <div class="flex justify-between items-center mb-3 text-[9px] font-bold opacity-80">
+                                <span>12:24</span>
+                                <div class="flex items-center space-x-1.5">
+                                    <i class="fa-solid fa-signal"></i>
+                                    <i class="fa-solid fa-wifi"></i>
+                                    <i class="fa-solid fa-battery-three-quarters"></i>
+                                </div>
+                            </div>
+
+                            <!-- Infos Utilisateur et Actions Haut -->
+                            <div class="flex justify-between items-center mb-4">
+                                <div>
+                                    <h3 class="text-base font-extrabold tracking-tight">Utilisateur</h3>
+                                    <p class="text-[10px] text-emerald-200 font-medium">Bienvenue dans votre espace</p>
+                                </div>
+                                <div class="flex space-x-1.5">
+                                    <button class="w-7 h-7 bg-white/20 rounded-full flex items-center justify-center text-[10px] hover:bg-white/30 transition-colors">
+                                        <i class="fa-solid fa-table-cells-large"></i>
+                                    </button>
+                                    <button class="w-7 h-7 bg-white/20 rounded-full flex items-center justify-center text-[10px] hover:bg-white/30 transition-colors">
+                                        <i class="fa-solid fa-bell"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Carte de Solde Blanche (Déborde sur le bas) -->
+                            <div class="absolute left-4 right-4 bottom-[-32px] bg-white rounded-2xl p-4 shadow-lg border border-slate-100 flex flex-col justify-between z-10">
+                                <div class="flex justify-between items-center mb-1">
+                                    <!-- Bouton de masquage de l'œil identique à l'image -->
+                                    <span class="w-7 h-7 bg-[#212E53] text-white rounded-lg flex items-center justify-center text-xs">
+                                        <i class="fa-solid fa-eye-slash"></i>
+                                    </span>
+                                </div>
+                                <!-- Points de masquage du solde -->
+                                <div class="text-slate-900 text-lg font-black tracking-[0.2em] flex items-center mt-1">
+                                    ●●●●●●●
+                                </div>
                             </div>
                         </div>
 
-                        <p class="text-[10px] uppercase tracking-widest text-togoSand/80 font-bold mb-3">Statut de la Tontine</p>
-                        
-                        <!-- Bento Box de statut à bordure organique -->
-                        <div class="w-full bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-3.5 text-left text-xs space-y-1 shadow-lg">
-                            <p class="text-togoSafran font-bold flex items-center space-x-1">
-                                <span>🌟</span> <span>Niveau Akpédjé (Excellent)</span>
-                            </p>
-                            <p class="text-togoSand/80 leading-normal text-[11px]">
-                                Cotisation régulière validée. Prêt disponible de <strong class="text-white">25 000 FCFA</strong>.
-                            </p>
+                        <!-- Espace vide pour compenser la carte flottante -->
+                        <div class="h-10"></div>
+
+                        <!-- Corps principal -->
+                        <div class="px-4 py-3 space-y-5 flex-1 bg-[#F8F9FA]">
+                            
+                            <!-- Actions Rapides -->
+                            <div class="space-y-2">
+                                <h4 class="text-xs font-black text-[#212E53] tracking-wide">Actions Rapides</h4>
+                                
+                                <!-- Grille de boutons d'actions calquée sur la capture -->
+                                <div class="bg-white rounded-2xl p-3 flex justify-between items-center shadow-sm border border-slate-100">
+                                    <!-- Dépôt -->
+                                    <div class="flex flex-col items-center space-y-1 cursor-pointer">
+                                        <div class="w-8 h-8 bg-teal-50 text-teal-600 rounded-full flex items-center justify-center text-xs">
+                                            <i class="fa-solid fa-arrow-down"></i>
+                                        </div>
+                                        <span class="text-[9px] font-bold text-slate-700">Dépôt</span>
+                                    </div>
+                                    
+                                    <!-- Retrait -->
+                                    <div class="flex flex-col items-center space-y-1 cursor-pointer">
+                                        <div class="w-8 h-8 bg-red-50 text-red-500 rounded-full flex items-center justify-center text-xs">
+                                            <i class="fa-solid fa-arrow-up"></i>
+                                        </div>
+                                        <span class="text-[9px] font-bold text-slate-700">Retrait</span>
+                                    </div>
+
+                                    <!-- Cotiser -->
+                                    <div class="flex flex-col items-center space-y-1 cursor-pointer">
+                                        <div class="w-8 h-8 bg-green-50 text-green-600 rounded-full flex items-center justify-center text-xs">
+                                            <i class="fa-solid fa-piggy-bank"></i>
+                                        </div>
+                                        <span class="text-[9px] font-bold text-slate-700">Cotiser</span>
+                                    </div>
+
+                                    <!-- Rejoindre -->
+                                    <div class="flex flex-col items-center space-y-1 cursor-pointer">
+                                        <div class="w-8 h-8 bg-blue-50 text-blue-500 rounded-full flex items-center justify-center text-xs">
+                                            <i class="fa-solid fa-user-plus"></i>
+                                        </div>
+                                        <span class="text-[9px] font-bold text-slate-700">Rejoindre</span>
+                                    </div>
+
+                                    <!-- Plus -->
+                                    <div class="flex flex-col items-center space-y-1 cursor-pointer">
+                                        <div class="w-8 h-8 bg-slate-100 text-slate-600 rounded-full flex items-center justify-center text-xs">
+                                            <i class="fa-solid fa-ellipsis"></i>
+                                        </div>
+                                        <span class="text-[9px] font-bold text-slate-700">Plus</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Mes Tontines -->
+                            <div class="space-y-3">
+                                <div class="flex justify-between items-center">
+                                    <h4 class="text-xs font-black text-[#212E53] tracking-wide">Mes Tontines</h4>
+                                    <a href="#" class="text-[10px] font-bold text-[#212E53] hover:underline">Voir tout</a>
+                                </div>
+
+                                <!-- Zone d'absence de tontine d'après la capture d'écran -->
+                                <div class="flex flex-col items-center justify-center py-6 px-4 text-center space-y-1 bg-white rounded-2xl border border-slate-100 shadow-sm">
+                                    <p class="text-xs font-bold text-slate-600">Aucune tontine active</p>
+                                    <p class="text-[10px] text-slate-400 font-medium">Rejoignez un groupe pour commencer.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Barre de navigation inférieure (Tab Bar) -->
+                        <div class="border-t border-slate-100 bg-white py-1.5 px-3 flex justify-between items-center z-10 shadow-inner">
+                            <!-- Accueil (Actif) -->
+                            <button class="flex flex-col items-center flex-1 text-[#212E53]">
+                                <i class="fa-solid fa-house text-xs"></i>
+                                <span class="text-[8px] font-bold mt-1">Accueil</span>
+                            </button>
+                            <!-- Notif -->
+                            <button class="flex flex-col items-center flex-1 text-slate-400 hover:text-[#212E53]">
+                                <i class="fa-solid fa-bell text-xs"></i>
+                                <span class="text-[8px] font-bold mt-1">Notif</span>
+                            </button>
+                            <!-- Tontines -->
+                            <button class="flex flex-col items-center flex-1 text-slate-400 hover:text-[#212E53]">
+                                <i class="fa-solid fa-users text-xs"></i>
+                                <span class="text-[8px] font-bold mt-1">Tontines</span>
+                            </button>
+                            <!-- Profil -->
+                            <button class="flex flex-col items-center flex-1 text-slate-400 hover:text-[#212E53]">
+                                <i class="fa-solid fa-user text-xs"></i>
+                                <span class="text-[8px] font-bold mt-1">Profil</span>
+                            </button>
                         </div>
                     </div>
-                    
-                    <!-- Bouton Action App -->
-                    <button class="relative z-10 w-full bg-gradient-to-r from-togoSafran to-amber-500 text-togoDark font-black text-center py-3.5 rounded-xl text-xs shadow-xl active:scale-95 transition-transform uppercase tracking-wider">
-                        Cotiser Aujourd'hui
-                    </button>
                 </div>
 
-                <!-- Bulle témoignage flottante en bas à gauche -->
-                <div class="absolute -bottom-6 -left-6 bg-white/95 backdrop-blur-md border border-togoGreen/10 p-4 rounded-asym-md shadow-xl flex items-center space-x-3 max-w-[220px] z-20">
-                    <div class="w-10 h-10 bg-togoSafran rounded-organic-1 flex items-center justify-center text-lg shadow-md">
+                <!-- Bulle témoignage flottante originale de l'impact local -->
+                <div class="absolute -bottom-6 -left-6 bg-white/95 backdrop-blur-md border border-logoBlue/10 p-4 rounded-asym-md shadow-xl flex items-center space-x-3 max-w-[220px] z-20">
+                    <div class="w-10 h-10 bg-logoEmerald rounded-organic-1 flex items-center justify-center text-lg shadow-md text-white">
                         🏍️
                     </div>
                     <div>
-                        <h4 class="text-xs font-bold text-togoDark">Koffi M.</h4>
-                        <p class="text-[9px] text-togoDark/60 font-medium">Conducteur à Assivito, Lomé</p>
+                        <h4 class="text-xs font-bold text-logoBlue">Koffi M.</h4>
+                        <p class="text-[9px] text-logoBlue/60 font-medium">Conducteur à Assivito, Lomé</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
     <!-- SECTION LE CONCEPT ET SA PROMESSE (FORMES ASYMÉTRIQUES) -->
     <section class="py-24 bg-white relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-8">
             
             <div class="text-center space-y-4 max-w-2xl mx-auto mb-16" data-aos="fade-up">
                 <span class="text-togoEarth font-bold uppercase tracking-widest text-xs">Simplicité & Solidarité</span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-togoDark title-font">Une Tontine moderne au service de vos ambitions</h2>
-                <div class="w-12 h-1.5 bg-togoSafran mx-auto rounded-full"></div>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-logoBlue title-font">Une Tontine moderne au service de vos ambitions</h2>
+                <div class="w-12 h-1.5 bg-[#059669] mx-auto rounded-full"></div>
             </div>
 
             <!-- Bento-style Grid avec des formes différentes (sans rectangles classiques) -->
             <div class="grid md:grid-cols-3 gap-8">
                 
                 <!-- Carte 1: Le Dépôt Quotidien -->
-                <div class="bg-togoSand/50 border border-togoGreen/10 rounded-asym-lg p-8 transition-all duration-300 hover:shadow-xl hover:scale-[1.02] flex flex-col justify-between" data-aos="fade-up" data-aos-delay="100">
-                    <div class="w-14 h-14 bg-togoGreen/10 text-togoGreen rounded-organic-1 flex items-center justify-center text-2xl mb-8">
+                <div class="bg-togoSand/50 border border-logoBlue/10 rounded-asym-lg p-8 transition-all duration-300 hover:shadow-xl hover:scale-[1.02] flex flex-col justify-between" data-aos="fade-up" data-aos-delay="100">
+                     <div class="w-14 h-14 bg-logoEmerald/10 text-logoEmerald rounded-organic-1 flex items-center justify-center text-2xl mb-8">
                         <i class="fa-solid fa-piggy-bank"></i>
                     </div>
                     <div class="space-y-4">
-                        <h3 class="text-xl font-bold text-togoDark title-font">1. Épargne Mobile</h3>
-                        <p class="text-togoDark/70 text-sm leading-relaxed">
+                        <h3 class="text-xl font-bold text-logoBlue title-font">1. Épargne Mobile</h3>
+                        <p class="text-logoBlue/70 text-sm leading-relaxed">
                             Vous déposez vos cotisations quotidiennes (dès 500 FCFA) directement via votre compte TMoney ou Moov Money. Pas besoin d'attendre quelqu'un, pas de carnet papier perdu.
                         </p>
                     </div>
                 </div>
 
                 <!-- Carte 2: La Confiance Mesurée -->
-                <div class="bg-togoSand/50 border border-togoGreen/10 rounded-asym-lg p-8 transition-all duration-300 hover:shadow-xl hover:scale-[1.02] flex flex-col justify-between" data-aos="fade-up" data-aos-delay="200">
+                <div class="bg-togoSand/50 border border-logoBlue/10 rounded-asym-lg p-8 transition-all duration-300 hover:shadow-xl hover:scale-[1.02] flex flex-col justify-between" data-aos="fade-up" data-aos-delay="200">
                     <div class="w-14 h-14 bg-togoEarth/10 text-togoEarth rounded-organic-2 flex items-center justify-center text-2xl mb-8">
                         <i class="fa-solid fa-chart-line"></i>
                     </div>
                     <div class="space-y-4">
-                        <h3 class="text-xl font-bold text-togoDark title-font">2. Score de Confiance</h3>
-                        <p class="text-togoDark/70 text-sm leading-relaxed">
+                        <h3 class="text-xl font-bold text-logoBlue title-font">2. Score de Confiance</h3>
+                        <p class="text-logoBlue/70 text-sm leading-relaxed">
                             Chaque versement régulier améliore votre score de confiance dans l'application. Votre sérieux sur le long terme remplace les garanties physiques et les fiches de paie.
                         </p>
                     </div>
                 </div>
 
                 <!-- Carte 3: Le Financement Débloqué -->
-                <div class="bg-togoSand/50 border border-togoGreen/10 rounded-asym-lg p-8 transition-all duration-300 hover:shadow-xl hover:scale-[1.02] flex flex-col justify-between" data-aos="fade-up" data-aos-delay="300">
-                    <div class="w-14 h-14 bg-togoSafran/20 text-togoSafran rounded-organic-3 flex items-center justify-center text-2xl mb-8">
+                <div class="bg-togoSand/50 border border-logoBlue/10 rounded-asym-lg p-8 transition-all duration-300 hover:shadow-xl hover:scale-[1.02] flex flex-col justify-between" data-aos="fade-up" data-aos-delay="300">
+                     <div class="w-14 h-14 bg-togoSafran/20 text-togoSafran rounded-organic-3 flex items-center justify-center text-2xl mb-8">
                         <i class="fa-solid fa-bolt"></i>
                     </div>
                     <div class="space-y-4">
-                        <h3 class="text-xl font-bold text-togoDark title-font">3. Crédit Instantané</h3>
-                        <p class="text-togoDark/70 text-sm leading-relaxed">
+                        <h3 class="text-xl font-bold text-logoBlue title-font">3. Crédit Instantané</h3>
+                        <p class="text-logoBlue/70 text-sm leading-relaxed">
                             Besoin de carburant ou d'acheter des marchandises ? Votre niveau de confiance vous permet d'emprunter instantanément de petites sommes d'argent pour propulser votre activité.
                         </p>
                     </div>
@@ -330,177 +420,77 @@
     </section>
 
     <!-- SECTION SIMULATEUR DE SCORE DE CONFIANCE (HAUTE INTERACTIVITÉ) -->
-    <section id="simulateur" class="py-24 bg-togoDark text-togoSand relative overflow-hidden">
-        
-        <!-- Graphismes d'arrière-plan de la savane togolaise -->
-        <div class="absolute -bottom-24 -right-24 w-96 h-96 bg-togoGreen/25 rounded-full blur-3xl"></div>
-        <div class="absolute -top-24 -left-24 w-96 h-96 bg-togoEarth/20 rounded-full blur-3xl"></div>
 
-        <div class="max-w-5xl mx-auto px-4 sm:px-8 grid md:grid-cols-2 gap-12 items-center relative z-10">
-            
-            <div class="space-y-6" data-aos="fade-right">
-                <span class="text-togoSafran font-bold uppercase tracking-widest text-xs">Simulateur de Crédit</span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight title-font leading-tight text-white">
-                    Votre assiduité devient votre unique <span class="text-togoSafran">garantie de prêt.</span>
-                </h2>
-                <p class="text-togoSand/70 text-sm sm:text-base leading-relaxed">
-                    Au Togo, nous croyons à la parole donnée. Sur Zem-Tontine, pas besoin de paperasse administrative fastidieuse. C'est la régularité de vos dépôts qui calcule votre capacité d'emprunt. Faites le test :
-                </p>
+<section id="impact" class="py-4">
+  <!-- En-tête de la section -->
+  <div class="text-center space-y-4 max-w-2xl mx-auto" data-aos="fade-up">
+    <span class="text-logoBlue font-bold uppercase tracking-widest text-xs">
+      Impact Réel au Pays
+    </span>
+    <h2 class="text-3xl sm:text-4xl font-extrabold text-logoEmerald title-font">
+      Créé pour faire vivre notre économie locale
+    </h2>
+    <p class="text-logoEmerald/70 text-sm sm:text-base">
+      Allier l'innovation digitale à la tradition solidaire de nos anciens.
+    </p>
+  </div>
 
-                <!-- Curseur 1 (Fréquence) -->
-                <div class="space-y-3 bg-white/5 p-6 rounded-2xl border border-white/10 backdrop-blur-sm">
-                    <div class="flex justify-between text-xs font-bold uppercase tracking-wider text-togoSand/80">
-                        <span>Fréquence des dépôts (par semaine)</span>
-                        <span class="text-togoSafran text-sm font-black" id="regVal">5 jours / 7</span>
-                    </div>
-                    <input type="range" id="regInput" min="1" max="7" value="5" class="w-full accent-togoSafran bg-white/10 h-2 rounded-lg cursor-pointer">
-                </div>
+  <!-- Conteneur pour l'image -->
+  <div class="w-full mt-6">
+    <img 
+      src="./images/Zem.svg" 
+      alt="Bande dessinée Zem-Tontine : Le travail, l'application et la réussite au Togo" 
+      class="w-full h-auto object-cover"
+      loading="lazy"
+    />
+  </div>
+</section>
 
-                <!-- Curseur 2 (Ancienneté) -->
-                <div class="space-y-3 bg-white/5 p-6 rounded-2xl border border-white/10 backdrop-blur-sm">
-                    <div class="flex justify-between text-xs font-bold uppercase tracking-wider text-togoSand/80">
-                        <span>Durée d'épargne active</span>
-                        <span class="text-togoSafran text-sm font-black" id="ancVal">3 mois</span>
-                    </div>
-                    <input type="range" id="ancInput" min="1" max="12" value="3" class="w-full accent-togoSafran bg-white/10 h-2 rounded-lg cursor-pointer">
-                </div>
-            </div>
 
-            <!-- CADRAN DE RENDU DU SCORE & CAPACITÉ (FORME DE GALET UNIQUE) -->
-            <div class="bg-gradient-to-br from-togoDark to-togoGreen/40 border border-white/10 p-8 rounded-asym-lg flex flex-col items-center text-center space-y-6 shadow-2xl relative" data-aos="zoom-in" data-aos-duration="1000">
-                <div class="absolute -top-4 bg-togoEarth text-white text-[10px] font-black px-4 py-1.5 rounded-full uppercase tracking-widest shadow-md">
-                    Calculateur Togolais en Direct
-                </div>
-                
-                <p class="text-xs uppercase tracking-widest text-togoSand/60 font-bold pt-4">Votre capacité de crédit estimée</p>
-                
-                <!-- Zone d'affichage du Score dynamique -->
-                <div class="text-7xl font-extrabold text-togoSafran tracking-tighter title-font" id="scoreDisplay">
-                    65 <span class="text-lg text-togoSand/60 font-normal">/100</span>
-                </div>
-
-                <!-- Montant empruntable en FCFA -->
-                <div class="bg-white/5 w-full py-4 px-6 rounded-xl border border-white/10">
-                    <p class="text-xs text-togoSand/50 uppercase font-semibold">Crédit débloquable immédiatement</p>
-                    <p class="text-2xl sm:text-3xl font-black text-white title-font mt-1" id="creditDisplay">15 000 FCFA</p>
-                </div>
-                
-                <!-- Badges de qualifications qui s'illuminent -->
-                <div class="w-full pt-4 border-t border-white/5 grid grid-cols-2 gap-4 text-xs font-bold">
-                    <div id="badgeCarb" class="p-3.5 rounded-xl border transition-all duration-300">⛽ Plein Carburant</div>
-                    <div id="badgeScol" class="p-3.5 rounded-xl border transition-all duration-300">🎒 Crédit École</div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- SECTION COMPAGNOTS DE ROUTE (NOTRE IMPACT LOCAL ET VISUELLES TOGO) -->
-    <section id="impact" class="py-24 px-4 sm:px-8 lg:px-12 max-w-7xl mx-auto space-y-16">
-        
-        <div class="text-center space-y-4 max-w-2xl mx-auto" data-aos="fade-up">
-            <span class="text-togoGreen font-bold uppercase tracking-widest text-xs">Impact Réel au Pays</span>
-            <h2 class="text-3xl sm:text-4xl font-extrabold text-togoDark title-font">Créé pour faire vivre notre économie locale</h2>
-            <p class="text-togoDark/70 text-sm sm:text-base">Allier l'innovation digitale à la tradition solidaire de nos anciens.</p>
-        </div>
-
-        <div class="grid md:grid-cols-3 gap-8">
-            
-            <!-- Profil 1: Conducteurs de Zem (Lomé) -->
-            <div class="bg-white rounded-asym-lg border border-togoGreen/10 p-6 space-y-6 shadow-sm hover:shadow-xl transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
-                <div class="h-52 w-full bg-togoSafran/20 rounded-asym-md relative overflow-hidden flex items-center justify-center text-6xl">
-                    🏍️
-                    <!-- Overlay de localisation togolais -->
-                    <div class="absolute bottom-3 left-3 bg-togoDark/85 text-togoSand font-bold text-[10px] uppercase tracking-wider px-3 py-1 rounded-full backdrop-blur-sm">
-                        Sur les routes de Lomé
-                    </div>
-                </div>
-                <div class="space-y-3">
-                    <h3 class="text-xl font-bold text-togoDark title-font">Conducteurs de Zem</h3>
-                    <p class="text-togoDark/70 text-sm leading-relaxed">
-                        Plus besoin de rouler des journées entières pour rembourser de lourds emprunts informels. Votre cotisation de confiance quotidienne vous permet de réparer votre moto en cas d'imprévu.
-                    </p>
-                </div>
-            </div>
-
-            <!-- Profil 2: Les Mamans de nos Marchés (Assigamé / Hedzranawoé) -->
-            <div class="bg-white rounded-asym-lg border border-togoGreen/10 p-6 space-y-6 shadow-sm hover:shadow-xl transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
-                <div class="h-52 w-full bg-togoEarth/20 rounded-asym-md relative overflow-hidden flex items-center justify-center text-6xl">
-                    👜
-                    <div class="absolute bottom-3 left-3 bg-togoDark/85 text-togoSand font-bold text-[10px] uppercase tracking-wider px-3 py-1 rounded-full backdrop-blur-sm">
-                        Grand Marché d'Assigamé
-                    </div>
-                </div>
-                <div class="space-y-3">
-                    <h3 class="text-xl font-bold text-togoDark title-font">Revendeuses du Marché</h3>
-                    <p class="text-togoDark/70 text-sm leading-relaxed">
-                        Sécurisez les recettes de vos ventes quotidiennes à l'instant t via Mobile Money. Votre argent produit de la confiance numérique pour financer vos futurs stocks.
-                    </p>
-                </div>
-            </div>
-
-            <!-- Profil 3: Artisans et PME -->
-            <div class="bg-white rounded-asym-lg border border-togoGreen/10 p-6 space-y-6 shadow-sm hover:shadow-xl transition-all duration-300" data-aos="fade-up" data-aos-delay="300">
-                <div class="h-52 w-full bg-togoGreen/15 rounded-asym-md relative overflow-hidden flex items-center justify-center text-6xl">
-                    ⚙️
-                    <div class="absolute bottom-3 left-3 bg-togoDark/85 text-togoSand font-bold text-[10px] uppercase tracking-wider px-3 py-1 rounded-full backdrop-blur-sm">
-                        Épargne d'Avenir
-                    </div>
-                </div>
-                <div class="space-y-3">
-                    <h3 class="text-xl font-bold text-togoDark title-font">Artisans & Créateurs</h3>
-                    <p class="text-togoDark/70 text-sm leading-relaxed">
-                        Une tontine digitale respectueuse des codes et coutumes de notre continent. Épargnez ensemble, investissez sereinement dans votre atelier ou le matériel professionnel.
-                    </p>
-                </div>
-            </div>
-
-        </div>
-    </section>
 
     <!-- SECTION QUESTIONS FRÉQUENTES / ACCORDÉONS DYNAMIQUES -->
-    <section id="faq" class="py-24 bg-togoSand border-t border-togoGreen/10 px-4 sm:px-8">
+    <section id="faq" class="py-24 bg-togoSand border-t border-logoBlue/10 px-4 sm:px-8">
         <div class="max-w-3xl mx-auto space-y-12">
             
             <div class="text-center space-y-4">
                 <span class="text-togoEarth font-bold uppercase tracking-widest text-xs">Clarté & Transparence</span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-togoDark title-font">Des réponses honnêtes pour chacun de vous</h2>
-                <div class="w-12 h-1.5 bg-togoGreen mx-auto rounded-full"></div>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-logoEmerald title-font">Des réponses honnêtes pour chacun de vous</h2>
+                <div class="w-12 h-1.5 bg-logoBlue mx-auto rounded-full"></div>
             </div>
             
             <!-- Accordéons avec transitions fluides -->
             <div class="space-y-4">
                 
                 <!-- Accordéon 1 -->
-                <div class="bg-white rounded-2xl border border-togoGreen/10 shadow-sm overflow-hidden">
-                    <button onclick="toggleFaq(1)" class="w-full text-left p-6 font-bold text-togoDark flex justify-between items-center hover:bg-togoSand/40 transition-colors">
+                <div class="bg-white rounded-2xl border border-logoBlue/10 shadow-sm overflow-hidden">
+                    <button onclick="toggleFaq(1)" class="w-full text-left p-6 font-bold text-logoEmerald flex justify-between items-center hover:bg-togoSand/40 transition-colors">
                         <span class="text-base sm:text-lg">Est-ce que mon argent est vraiment sécurisé au Togo ?</span>
-                        <span id="icon-1" class="text-togoGreen text-2xl font-bold transition-transform duration-300">+</span>
+                        <span id="icon-1" class="text-logoBlue text-2xl font-bold transition-transform duration-300">+</span>
                     </button>
-                    <div id="ans-1" class="hidden p-6 pt-0 text-sm sm:text-base text-togoDark/70 border-t border-togoSand leading-relaxed">
+                    <div id="ans-1" class="hidden p-6 pt-0 text-sm sm:text-base text-logoEmerald/70 border-t border-togoSand leading-relaxed">
                         Oui, absolument. Vos fonds ne sont jamais gérés ou détenus par des inconnus. Ils sont directement transférés et sécurisés de manière institutionnelle chez nos grands partenaires de télécommunication agréés (TMoney et Moov Money). Vous conservez l'accès exclusif à votre tontine avec votre propre code secret mobile.
                     </div>
                 </div>
 
                 <!-- Accordéon 2 -->
-                <div class="bg-white rounded-2xl border border-togoGreen/10 shadow-sm overflow-hidden">
-                    <button onclick="toggleFaq(2)" class="w-full text-left p-6 font-bold text-togoDark flex justify-between items-center hover:bg-togoSand/40 transition-colors">
+                <div class="bg-white rounded-2xl border border-logoBlue/10 shadow-sm overflow-hidden">
+                    <button onclick="toggleFaq(2)" class="w-full text-left p-6 font-bold text-logoEmerald flex justify-between items-center hover:bg-togoSand/40 transition-colors">
                         <span class="text-base sm:text-lg">Je n'ai pas de smartphone, puis-je quand même participer ?</span>
-                        <span id="icon-2" class="text-togoGreen text-2xl font-bold transition-transform duration-300">+</span>
+                        <span id="icon-2" class="text-logoBlue text-2xl font-bold transition-transform duration-300">+</span>
                     </button>
-                    <div id="ans-2" class="hidden p-6 pt-0 text-sm sm:text-base text-togoDark/70 border-t border-togoSand leading-relaxed">
-                        C'est notre plus grande innovation ! Vous n'avez pas besoin d'un téléphone moderne ou d'Internet pour cotiser. N'importe quel téléphone à touches basique fonctionne : il vous suffit de composer notre code court officiel gratuit <strong class="text-togoGreen font-bold">*567#</strong> pour envoyer vos tontines quotidiennes en quelques secondes.
+                    <div id="ans-2" class="hidden p-6 pt-0 text-sm sm:text-base text-logoEmerald/70 border-t border-togoSand leading-relaxed">
+                        C'est notre plus grande innovation ! Vous n'avez pas besoin d'un téléphone moderne ou d'Internet pour cotiser. N'importe quel téléphone à touches basique fonctionne : il vous suffit de composer notre code court officiel gratuit <strong class="text-logoBlue font-bold">*567#</strong> pour envoyer vos tontines quotidiennes en quelques secondes.
                     </div>
                 </div>
 
                 <!-- Accordéon 3 -->
-                <div class="bg-white rounded-2xl border border-togoGreen/10 shadow-sm overflow-hidden">
-                    <button onclick="toggleFaq(3)" class="w-full text-left p-6 font-bold text-togoDark flex justify-between items-center hover:bg-togoSand/40 transition-colors">
+                <div class="bg-white rounded-2xl border border-logoBlue/10 shadow-sm overflow-hidden">
+                    <button onclick="toggleFaq(3)" class="w-full text-left p-6 font-bold text-logoEmerald flex justify-between items-center hover:bg-togoSand/40 transition-colors">
                         <span class="text-base sm:text-lg">Quels sont les frais ou taux appliqués pour les microcrédits ?</span>
-                        <span id="icon-3" class="text-togoGreen text-2xl font-bold transition-transform duration-300">+</span>
+                        <span id="icon-3" class="text-logoBlue text-2xl font-bold transition-transform duration-300">+</span>
                     </button>
-                    <div id="ans-3" class="hidden p-6 pt-0 text-sm sm:text-base text-togoDark/70 border-t border-togoSand leading-relaxed">
-                        Zem-Tontine est un projet d'inclusion sociale. Les microcrédits de court terme (carburant, pièces, petits stocks) sont accordés avec des frais minimes, voire à <strong class="text-togoGreen font-bold">0% de taux d'intérêt</strong> pour nos membres les plus réguliers (niveau d'or "Akpédjé"). L'ensemble de nos conditions est entièrement transparente et expliquée directement sur notre application et par message.
+                    <div id="ans-3" class="hidden p-6 pt-0 text-sm sm:text-base text-logoEmerald/70 border-t border-togoSand leading-relaxed">
+                        Zem-Tontine est un projet d'inclusion sociale. Les microcrédits de court terme (carburant, pièces, petits stocks) sont accordés avec des frais minimes, voire à <strong class="text-logoBlue font-bold">0% de taux d'intérêt</strong> pour nos membres les plus réguliers (niveau d'or "Akpédjé"). L'ensemble de nos conditions est entièrement transparente et expliquée directement sur notre application et par message.
                     </div>
                 </div>
 
@@ -509,7 +499,7 @@
     </section>
 
     <!-- PIED DE PAGE & APPEL AUX PARTENAIRES (TERRE CHAUDE & ENGAGEMENT) -->
-    <footer class="bg-togoDark text-togoSand pt-20 pb-10 px-4 sm:px-8">
+    <footer class="bg-logoEmerald text-togoSand pt-20 pb-10 px-4 sm:px-8">
         <div class="max-w-5xl mx-auto text-center space-y-8 mb-16 relative">
             
             <!-- Icône d'inspiration togolaise -->
@@ -522,7 +512,7 @@
                 Stations-services, mutuelles de santé, assureurs ou professionnels de la microfinance : unissons nos forces pour soutenir l'inclusion sociale de demain.
             </p>
             
-            <a href="mailto:contact@zemtontine.tg" class="inline-flex bg-togoSafran hover:bg-white text-togoDark font-extrabold px-8 py-4 rounded-full transition-all duration-300 hover:scale-105 shadow-xl shadow-togoSafran/5">
+            <a href="mailto:contact@zemtontine.tg" class="inline-flex bg-togoSafran hover:bg-white text-logoEmerald font-extrabold px-8 py-4 rounded-full transition-all duration-300 hover:scale-105 shadow-xl shadow-togoSafran/5">
                 Devenir Partenaire Officiel
             </a>
         </div>
@@ -535,132 +525,6 @@
 
     <!-- JS pour la logique d'animation, menu et simulateur -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            // Initialisation de AOS (Animations légères)
-            AOS.init({
-                once: true,
-                duration: 800,
-                offset: 60
-            });
-            
-            // Initialisation du simulateur interactif
-            initSimulator();
-
-            // Gestion du Menu Mobile
-            const menuBtn = document.getElementById('mobileMenuBtn');
-            const menu = document.getElementById('mobileMenu');
-            const line1 = document.getElementById('line1');
-            const line2 = document.getElementById('line2');
-            const line3 = document.getElementById('line3');
-
-            menuBtn.addEventListener('click', () => {
-                menu.classList.toggle('hidden');
-                
-                // Animation de l'icône burger en croix
-                if (menu.classList.contains('hidden')) {
-                    line1.style.transform = "none";
-                    line2.style.opacity = "1";
-                    line3.style.transform = "none";
-                } else {
-                    line1.style.transform = "translateY(8px) rotate(45deg)";
-                    line2.style.opacity = "0";
-                    line3.style.transform = "translateY(-8px) rotate(-45deg)";
-                }
-            });
-
-            // Fermer le menu mobile lors du clic sur un lien
-            const links = menu.querySelectorAll('a');
-            links.forEach(link => {
-                link.addEventListener('click', () => {
-                    menu.classList.add('hidden');
-                    line1.style.transform = "none";
-                    line2.style.opacity = "1";
-                    line3.style.transform = "none";
-                });
-            });
-        });
-
-        // Fonction du simulateur financier
-        function initSimulator() {
-            const regInput = document.getElementById('regInput');
-            const ancInput = document.getElementById('ancInput');
-            const regVal = document.getElementById('regVal');
-            const ancVal = document.getElementById('ancVal');
-            const scoreDisplay = document.getElementById('scoreDisplay');
-            const creditDisplay = document.getElementById('creditDisplay');
-            
-            const badgeCarb = document.getElementById('badgeCarb');
-            const badgeScol = document.getElementById('badgeScol');
-
-            if (!regInput || !ancInput) return;
-
-            function calculate() {
-                const reg = parseInt(regInput.value);
-                const anc = parseInt(ancInput.value);
-
-                // Mises à jour des étiquettes textuelles locales
-                regVal.innerText = `${reg} jours / 7`;
-                ancVal.innerText = `${anc} mois d'activité`;
-
-                // Calcul mathématique fictif du score (de 30 à 100)
-                const baseScore = 25;
-                const regScore = reg * 8; // Max 56
-                const ancScore = Math.min(anc * 2.5, 20); // Max 20
-                const finalScore = Math.min(Math.round(baseScore + regScore + ancScore), 100);
-
-                // Affichage du score
-                scoreDisplay.innerHTML = `${finalScore} <span class="text-lg text-togoSand/60 font-normal">/100</span>`;
-
-                // Calcul et mise en forme de la capacité d'emprunt en FCFA
-                let creditAmount = 0;
-                if (finalScore >= 40) {
-                    creditAmount = (finalScore - 30) * 1200; // Augmentation linéaire
-                }
-                
-                // Formater le montant de façon lisible
-                const formattedCredit = creditAmount.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + " FCFA";
-                creditDisplay.innerText = creditAmount > 0 ? formattedCredit : "0 FCFA (Épargnez encore)";
-
-                // Gestion de l'état des badges par seuils de confiance
-                if (finalScore >= 55) {
-                    badgeCarb.className = "p-3.5 rounded-xl border border-togoSafran/40 bg-togoSafran/10 text-togoSafran text-center scale-105 shadow-lg shadow-togoSafran/5 transition-all duration-300";
-                } else {
-                    badgeCarb.className = "p-3.5 rounded-xl border border-white/5 text-togoSand/40 text-center scale-100 transition-all duration-300";
-                }
-
-                if (finalScore >= 80) {
-                    badgeScol.className = "p-3.5 rounded-xl border border-togoSafran/40 bg-togoSafran/10 text-togoSafran text-center scale-105 shadow-lg shadow-togoSafran/5 transition-all duration-300";
-                } else {
-                    badgeScol.className = "p-3.5 rounded-xl border border-white/5 text-togoSand/40 text-center scale-100 transition-all duration-300";
-                }
-            }
-
-            regInput.addEventListener('input', calculate);
-            ancInput.addEventListener('input', calculate);
-
-            calculate(); // Exécution au lancement de la page
-        }
-
-        // Accordéons de la FAQ
-        function toggleFaq(id) {
-            const answer = document.getElementById('ans-' + id);
-            const icon = document.getElementById('icon-' + id);
-            
-            if (!answer || !icon) return;
-
-            if (answer.classList.contains('hidden')) {
-                answer.classList.remove('hidden');
-                icon.innerText = "−";
-                icon.style.transform = "rotate(180deg)";
-                icon.style.color = "#C2410C"; // Couleur de terre pour l'activation
-            } else {
-                answer.classList.add('hidden');
-                icon.innerText = "+";
-                icon.style.transform = "rotate(0deg)";
-                icon.style.color = "#084F34"; // Retour au vert naturel
-            }
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>

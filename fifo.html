@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulateur de Crédit BD - Zem-Tontine</title>
+    <!-- Importation de Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        logoEmerald: '#046A38',
+                        togoSafran: '#FFC72C',
+                        togoBlue: '#002F6C',
+                        togoSand: '#F4F1EA',
+                        togoEarth: '#C8102E'
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Importation de polices de caractères lues comme des BD (Inter & Permanent Marker pour les titres BD) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <style>
+        .font-comic {
+            font-family: 'Permanent Marker', cursive;
+        }
+        .font-sans {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-slate-900 text-white min-h-screen flex items-center justify-center p-4">
+
+<section id="simulateur" class="py-24 bg-logoEmerald text-togoSand relative overflow-hidden font-sans w-full max-w-6xl rounded-3xl border-4 border-slate-900 shadow-[12px_12px_0px_0px_rgba(0,0,0,1)]">
+    
+    <!-- Décors subtils en arrière-plan -->
+    <div class="absolute top-0 right-0 w-96 h-96 bg-logoBlue/10 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute bottom-0 left-0 w-96 h-96 bg-togoEarth/10 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-6xl mx-auto px-4 sm:px-8 relative z-10">
+        
+        <!-- En-tête de l'histoire -->
+        <div class="text-center max-w-2xl mx-auto mb-20 space-y-4" data-aos="fade-up">
+            <span class="text-togoSafran font-black uppercase tracking-widest text-xs px-3 py-1 bg-white/5 rounded-full border border-white/10">
+                📖 MIA KPƆE ! (FAISONS LE TEST)
+            </span>
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-white leading-tight">
+                La tontine qui récompense <br>
+                <span class="text-togoSafran">votre parole donnée</span>
+            </h2>
+            <p class="text-togoSand/80 text-sm sm:text-base max-w-lg mx-auto">
+                Pas de paperasse compliquée. Suivez l'histoire de notre conducteur et ajustez vos propres habitudes pour voir votre confiance grandir !
+            </p>
+        </div>
+
+        <!-- PLANCHE DE BANDE DESSINÉE INTERACTIVE -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 relative">
+            
+            <!-- Lignes de connexion de la BD (Dashes) - Visibles sur grand écran -->
+            <div class="hidden lg:block absolute top-[15%] left-[28%] right-[28%] h-0.5 border-t-2 border-dashed border-togoSafran/30 z-0"></div>
+
+            <!-- CASE 1 : LE RYTHME (Le travail de terrain) -->
+            <div class="bg-white text-slate-900 border-4 border-slate-900 rounded-3xl p-6 relative z-10 flex flex-col justify-between shadow-[8px_8px_0px_0px_rgba(0,0,0,0.15)] transition-transform hover:-translate-y-1" data-aos="fade-right" data-aos-delay="100">
+                
+                <!-- Bandeau Titre Case BD -->
+                <div class="bg-togoSafran text-slate-900 border-b-4 border-slate-900 font-black uppercase tracking-wider text-xs px-4 py-2 absolute -top-5 left-6 rounded-lg rotate-[-2deg] shadow">
+                    Case 1 : Le Rythme sur le terrain
+                </div>
+
+                <div class="space-y-6 pt-4">
+                    <!-- Bulle de dialogue style BD -->
+                    <div class="relative bg-slate-100 border-2 border-slate-900 p-3.5 rounded-2xl shadow-sm text-xs font-bold leading-relaxed">
+                        <span class="text-logoEmerald">"Gbesiagbe, gbesiagbe !*</span> Sur ma moto, chaque jour de dépôt renforce ma parole."
+                        <div class="text-[9px] text-slate-500 font-normal mt-1 italic">*Gbesiagbe = Chaque jour / Au quotidien</div>
+                        <!-- Pointe de la bulle -->
+                        <div class="absolute -bottom-2.5 left-8 w-4 h-4 bg-slate-100 border-r-2 border-b-2 border-slate-900 rotate-45"></div>
+                    </div>
+
+                    <!-- Illustration miniature stylisée (Conducteur de Zem en pagne) -->
+                    <div class="flex items-center gap-3">
+                        <div class="w-14 h-14 rounded-full bg-togoSafran border-2 border-slate-900 flex items-center justify-center text-3xl shadow-inner shrink-0 overflow-hidden relative">
+                            <!-- Petit dessin SVG d'un conducteur en pagne -->
+                            <svg class="w-full h-full p-1" viewBox="0 0 100 100">
+                                <circle cx="50" cy="35" r="15" fill="#4A3728"/>
+                                <!-- Chemise en Pagne coloré géométrique -->
+                                <path d="M25,80 C25,50 75,50 75,80 Z" fill="#E65F2B"/>
+                                <rect x="35" y="55" width="30" height="25" fill="#FFC72C"/>
+                                <circle cx="50" cy="65" r="5" fill="#046A38"/>
+                                <path d="M35,32 Q50,45 65,32" stroke="#4A3728" stroke-width="4" fill="none"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="font-black text-sm uppercase text-slate-900">Le Zemidjan</h4>
+                            <p class="text-[11px] text-slate-500 font-medium">Habillé en pagne traditionnel coloré</p>
+                        </div>
+                    </div>
+
+                    <p class="text-xs text-slate-700 font-semibold leading-relaxed">
+                        Indiquez combien de jours par semaine vous passez faire votre dépôt tontine :
+                    </p>
+                </div>
+
+                <!-- Curseur Interactif -->
+                <div class="space-y-2 pt-4 mt-6 border-t-2 border-dashed border-slate-200">
+                    <div class="flex justify-between items-center text-xs font-black">
+                        <span class="text-slate-500">FRÉQUENCE</span>
+                        <span class="text-logoEmerald bg-logoEmerald/10 px-2.5 py-1 rounded-md text-sm" id="regVal">5 jours / 7</span>
+                    </div>
+                    <input type="range" id="regInput" min="1" max="7" value="5" class="w-full accent-logoEmerald bg-slate-200 h-2.5 rounded-lg cursor-pointer">
+                </div>
+            </div>
+
+            <!-- CASE 2 : L'APPLICATION (La construction de la confiance) -->
+            <div class="bg-white text-slate-900 border-4 border-slate-900 rounded-3xl p-6 relative z-10 flex flex-col justify-between shadow-[8px_8px_0px_0px_rgba(0,0,0,0.15)] transition-transform hover:-translate-y-1" data-aos="fade-up" data-aos-delay="200">
+                
+                <!-- Bandeau Titre Case BD -->
+                <div class="bg-togoBlue text-white border-b-4 border-slate-900 font-black uppercase tracking-wider text-xs px-4 py-2 absolute -top-5 left-6 rounded-lg rotate-[2deg] shadow">
+                    Case 2 : L'application & la confiance
+                </div>
+
+                <div class="space-y-6 pt-4">
+                    <!-- Bulle de dialogue style BD -->
+                    <div class="relative bg-slate-100 border-2 border-slate-900 p-3.5 rounded-2xl shadow-sm text-xs font-bold leading-relaxed">
+                        "L'application calcule mon assiduité. Ma parole, c’est ma seule garantie, <span class="text-togoBlue">nɔvi !*</span>"
+                        <div class="text-[9px] text-slate-500 font-normal mt-1 italic">*Nɔvi = Mon frère / Mon ami de confiance</div>
+                        <!-- Pointe de la bulle -->
+                        <div class="absolute -bottom-2.5 left-8 w-4 h-4 bg-slate-100 border-r-2 border-b-2 border-slate-900 rotate-45"></div>
+                    </div>
+
+                    <!-- Illustration miniature stylisée (Application mobile) -->
+                    <div class="flex items-center gap-3">
+                        <div class="w-14 h-14 rounded-full bg-togoBlue border-2 border-slate-900 flex items-center justify-center text-3xl shadow-inner shrink-0 text-white">
+                            📱
+                        </div>
+                        <div>
+                            <h4 class="font-black text-sm uppercase text-slate-900">La Tontine Digitale</h4>
+                            <p class="text-[11px] text-slate-500 font-medium">Sécurisée et sans papiers administratifs</p>
+                        </div>
+                    </div>
+
+                    <p class="text-xs text-slate-700 font-semibold leading-relaxed">
+                        Depuis combien de mois épargnez-vous régulièrement chez Zem-Tontine ?
+                    </p>
+                </div>
+
+                <!-- Curseur Interactif -->
+                <div class="space-y-2 pt-4 mt-6 border-t-2 border-dashed border-slate-200">
+                    <div class="flex justify-between items-center text-xs font-black">
+                        <span class="text-slate-500">ANCIENNETÉ</span>
+                        <span class="text-togoBlue bg-togoBlue/10 px-2.5 py-1 rounded-md text-sm" id="ancVal">3 mois</span>
+                    </div>
+                    <input type="range" id="ancInput" min="1" max="12" value="3" class="w-full accent-togoBlue bg-slate-200 h-2.5 rounded-lg cursor-pointer">
+                </div>
+            </div>
+
+            <!-- CASE 3 : LE CRÉDIT (La récompense directe) -->
+            <div class="bg-white text-slate-900 border-4 border-slate-900 rounded-3xl p-6 relative z-10 flex flex-col justify-between shadow-[8px_8px_0px_0px_rgba(0,0,0,0.15)] transition-transform hover:-translate-y-1" data-aos="fade-left" data-aos-delay="300">
+                
+                <!-- Bandeau Titre Case BD -->
+                <div class="bg-logoEmerald text-togoSand border-b-4 border-slate-900 font-black uppercase tracking-wider text-xs px-4 py-2 absolute -top-5 left-6 rounded-lg rotate-[-1deg] shadow">
+                    Case 3 : Le crédit débloqué
+                </div>
+
+                <div class="space-y-4 pt-4">
+                    <!-- Bulle de dialogue style BD -->
+                    <div class="relative bg-slate-100 border-2 border-slate-900 p-3.5 rounded-2xl shadow-sm text-xs font-bold leading-relaxed">
+                        <span class="text-emerald-600">"Enyo !*</span> Mon crédit est disponible tout de suite pour faire mes projets !"
+                        <div class="text-[9px] text-slate-500 font-normal mt-1 italic">*Enyo = C'est parfait / C'est bon</div>
+                        <!-- Pointe de la bulle -->
+                        <div class="absolute -bottom-2.5 left-8 w-4 h-4 bg-slate-100 border-r-2 border-b-2 border-slate-900 rotate-45"></div>
+                    </div>
+
+                    <!-- Score de confiance dynamique style BD -->
+                    <div class="text-center bg-slate-50 border-2 border-slate-900 p-3 rounded-xl">
+                        <p class="text-[10px] uppercase font-bold text-slate-400 tracking-wider">Confiance Estimée</p>
+                        <p class="text-3xl font-black text-slate-900" id="scoreDisplay">
+                            65 <span class="text-sm font-medium text-togoSafran">%</span>
+                        </p>
+                    </div>
+
+                    <!-- Cadran du montant à débloquer immédiatement -->
+                    <div class="bg-togoSafran/20 border-2 border-slate-900 rounded-xl p-4 text-center">
+                        <p class="text-[10px] uppercase text-slate-500 font-extrabold tracking-wide">Somme déblocable</p>
+                        <p class="text-2xl sm:text-3xl font-black text-logoEmerald tracking-tight" id="creditDisplay">15 000 FCFA</p>
+                    </div>
+                </div>
+
+                <!-- Badges de financement débloqué -->
+                <div class="space-y-2 pt-4 mt-4 border-t-2 border-dashed border-slate-200">
+                    <p class="text-[10px] uppercase font-black text-slate-400 tracking-wider">Projets autorisés :</p>
+                    <div class="grid grid-cols-2 gap-2 text-xs font-extrabold">
+                        <div id="badgeCarb" class="p-2.5 rounded-xl border-2 border-slate-900 bg-white text-center shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] transition-all duration-300">
+                            ⛽ Plein
+                        </div>
+                        <div id="badgeScol" class="p-2.5 rounded-xl border-2 border-slate-900 bg-white text-center shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] transition-all duration-300">
+                            🎒 Écolage
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Lexique Ewe de bas de page (Chaleureux) -->
+        <div class="mt-12 text-center text-xs text-togoSand/60 italic" data-aos="fade-up">
+            💡 *Notre tontine parle votre langue : Gbesiagbe (Chaque jour) • Nɔvi (Mon frère/ami) • Enyo (C'est bon/génial)
+        </div>
+
+    </div>
+</section>
+
+<script>
+    // Éléments du DOM
+    const regInput = document.getElementById('regInput');
+    const ancInput = document.getElementById('ancInput');
+    const regVal = document.getElementById('regVal');
+    const ancVal = document.getElementById('ancVal');
+    const scoreDisplay = document.getElementById('scoreDisplay');
+    const creditDisplay = document.getElementById('creditDisplay');
+    
+    const badgeCarb = document.getElementById('badgeCarb');
+    const badgeScol = document.getElementById('badgeScol');
+
+    // Fonction de calcul de la confiance et du crédit
+    function updateSimulator() {
+        const reg = parseInt(regInput.value);
+        const anc = parseInt(ancInput.value);
+
+        // Mise à jour de l'affichage des valeurs des curseurs
+        regVal.textContent = `${reg} jour${reg > 1 ? 's' : ''} / 7`;
+        ancVal.textContent = `${anc} mois`;
+
+        // Calcul du Score de Confiance (De 15% à 100%)
+        // Le rythme quotidien pèse pour 60%, l'ancienneté pour 40%
+        const score = Math.round(((reg / 7) * 60) + ((anc / 12) * 40));
+        scoreDisplay.innerHTML = `${score} <span class="text-sm font-medium text-togoSafran">%</span>`;
+
+        // Calcul du montant débloqué
+        let creditAmount = 0;
+        if (score >= 35) {
+            // Échelle de crédit progressive en FCFA
+            creditAmount = Math.round(((score - 30) / 70) * 100000);
+            // Arrondir aux 5000 FCFA les plus proches pour faire réaliste
+            creditAmount = Math.ceil(creditAmount / 5000) * 5000;
+        }
+
+        // Limitation du crédit min et max
+        if (creditAmount < 5000 && score >= 35) creditAmount = 5000;
+        if (creditAmount > 100000) creditAmount = 100000;
+
+        // Rendu de l'affichage du crédit
+        if (score < 35) {
+            creditDisplay.textContent = "Épargnez encore un peu !";
+            creditDisplay.className = "text-sm sm:text-base font-black text-rose-600 tracking-normal mt-1";
+        } else {
+            creditDisplay.textContent = `${creditAmount.toLocaleString('fr-FR')} FCFA`;
+            creditDisplay.className = "text-2xl sm:text-3xl font-black text-logoEmerald tracking-tight mt-1";
+        }
+
+        // Allumage dynamique des badges de projets en fonction du montant/score
+        if (score >= 45) {
+            badgeCarb.className = "p-2.5 rounded-xl border-2 border-slate-900 bg-togoSafran text-slate-900 text-center shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] transition-all duration-300 transform scale-105";
+        } else {
+            badgeCarb.className = "p-2.5 rounded-xl border-2 border-slate-200 bg-white text-slate-300 text-center opacity-50 transition-all duration-300";
+        }
+
+        if (score >= 70) {
+            badgeScol.className = "p-2.5 rounded-xl border-2 border-slate-900 bg-emerald-500 text-white text-center shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] transition-all duration-300 transform scale-105";
+        } else {
+            badgeScol.className = "p-2.5 rounded-xl border-2 border-slate-200 bg-white text-slate-300 text-center opacity-50 transition-all duration-300";
+        }
+    }
+
+    // Écouteurs d'événements pour mettre à jour les calculs en temps réel
+    regInput.addEventListener('input', updateSimulator);
+    ancInput.addEventListener('input', updateSimulator);
+
+    // Initialisation au chargement de la page
+    window.onload = function() {
+        updateSimulator();
+    }
+</script>
+
+</body>
+</html>
