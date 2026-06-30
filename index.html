@@ -81,6 +81,16 @@
             background-position: center;
             background-attachment: relative;
         }
+        .bg-footer-image {
+            background-image: linear-gradient(
+                to top, 
+                rgba(10, 76, 55, 0.85) 0%, /* Rappelle la couleur logoEmerald */
+                rgba(5, 150, 105, 0.93) 100%
+            ), url('images/footer.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: relative;
+        }
         /* Custom scrollbar aux couleurs locales */
         ::-webkit-scrollbar {
             width: 8px;
@@ -166,11 +176,7 @@
             
             <!-- BLOC TEXTE À GAUCHE -->
             <div class="lg:col-span-7 space-y-8 text-center lg:text-left" data-aos="fade-right" data-aos-duration="1000">
-                <div class="inline-flex items-center space-x-2 bg-logoEmerald/10 border border-logoEmerald/20 px-4 py-2 rounded-full text-logoEmerald font-bold text-xs uppercase tracking-widest">
-                    <span class="w-2 h-2 rounded-full bg-togoEarth animate-ping"></span>
-                    <span>Woezon (Bienvenue) au Togo</span>
-                </div>
-
+               
                 <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-logoBlue leading-[1.1] tracking-tight title-font">
                     Faites grandir votre argent au rythme de <span class="text-logoEmerald underline decoration-togoSafran decoration-wavy decoration-2">vos ambitions</span> locales.
                 </h1>
@@ -353,7 +359,7 @@
                 <!-- Bulle témoignage flottante originale de l'impact local -->
                 <div class="absolute -bottom-6 -left-6 bg-white/95 backdrop-blur-md border border-logoBlue/10 p-4 rounded-asym-md shadow-xl flex items-center space-x-3 max-w-[220px] z-20">
                     <div class="w-10 h-10 bg-logoEmerald rounded-organic-1 flex items-center justify-center text-lg shadow-md text-white">
-                        🏍️
+                     <img src="https://tse1.explicit.bing.net/th/id/OIP.eoYhNPriDrQhESmGmwg4KgHaHa?r=0&cb=thfvnextfalcon3&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Koffi M." class="w-full h-full object-cover rounded-full">
                     </div>
                     <div>
                         <h4 class="text-xs font-bold text-logoBlue">Koffi M.</h4>
@@ -369,7 +375,7 @@
             
             <div class="text-center space-y-4 max-w-2xl mx-auto mb-16" data-aos="fade-up">
                 <span class="text-togoEarth font-bold uppercase tracking-widest text-xs">Simplicité & Solidarité</span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-logoBlue title-font">Une Tontine moderne au service de vos ambitions</h2>
+                <h2 class="text-1xl sm:text-4xl font-extrabold text-logoBlue title-font">Une Tontine moderne au service de vos ambitions</h2>
                 <div class="w-12 h-1.5 bg-[#059669] mx-auto rounded-full"></div>
             </div>
 
@@ -377,7 +383,7 @@
             <div class="grid md:grid-cols-3 gap-8">
                 
                 <!-- Carte 1: Le Dépôt Quotidien -->
-                <div class="bg-togoSand/50 border border-logoBlue/10 rounded-asym-lg p-8 transition-all duration-300 hover:shadow-xl hover:scale-[1.02] flex flex-col justify-between" data-aos="fade-up" data-aos-delay="100">
+                <div class="bg-togoSand/50 border border-logoBlue rounded-asym-lg p-8 transition-all duration-300 hover:shadow-xl hover:scale-[1.02] flex flex-col justify-between" data-aos="fade-up" data-aos-delay="100">
                      <div class="w-14 h-14 bg-logoEmerald/10 text-logoEmerald rounded-organic-1 flex items-center justify-center text-2xl mb-8">
                         <i class="fa-solid fa-piggy-bank"></i>
                     </div>
@@ -390,7 +396,7 @@
                 </div>
 
                 <!-- Carte 2: La Confiance Mesurée -->
-                <div class="bg-togoSand/50 border border-logoBlue/10 rounded-asym-lg p-8 transition-all duration-300 hover:shadow-xl hover:scale-[1.02] flex flex-col justify-between" data-aos="fade-up" data-aos-delay="200">
+                <div class="bg-togoSand/50 border border-logoBlue rounded-asym-lg p-8 transition-all duration-300 hover:shadow-xl hover:scale-[1.02] flex flex-col justify-between" data-aos="fade-up" data-aos-delay="200">
                     <div class="w-14 h-14 bg-togoEarth/10 text-togoEarth rounded-organic-2 flex items-center justify-center text-2xl mb-8">
                         <i class="fa-solid fa-chart-line"></i>
                     </div>
@@ -403,7 +409,7 @@
                 </div>
 
                 <!-- Carte 3: Le Financement Débloqué -->
-                <div class="bg-togoSand/50 border border-logoBlue/10 rounded-asym-lg p-8 transition-all duration-300 hover:shadow-xl hover:scale-[1.02] flex flex-col justify-between" data-aos="fade-up" data-aos-delay="300">
+                <div class="bg-togoSand/50 border border-logoBlue rounded-asym-lg p-8 transition-all duration-300 hover:shadow-xl hover:scale-[1.02] flex flex-col justify-between" data-aos="fade-up" data-aos-delay="300">
                      <div class="w-14 h-14 bg-togoSafran/20 text-togoSafran rounded-organic-3 flex items-center justify-center text-2xl mb-8">
                         <i class="fa-solid fa-bolt"></i>
                     </div>
@@ -421,31 +427,32 @@
 
     <!-- SECTION SIMULATEUR DE SCORE DE CONFIANCE (HAUTE INTERACTIVITÉ) -->
 
-<section id="impact" class="py-4">
-  <!-- En-tête de la section -->
-  <div class="text-center space-y-4 max-w-2xl mx-auto" data-aos="fade-up">
-    <span class="text-logoBlue font-bold uppercase tracking-widest text-xs">
-      Impact Réel au Pays
-    </span>
-    <h2 class="text-3xl sm:text-4xl font-extrabold text-logoEmerald title-font">
-      Créé pour faire vivre notre économie locale
-    </h2>
-    <p class="text-logoEmerald/70 text-sm sm:text-base">
-      Allier l'innovation digitale à la tradition solidaire de nos anciens.
-    </p>
-  </div>
+<!-- SECTION COMPAGNOTS DE ROUTE (NOTRE IMPACT LOCAL ET VISUELLES TOGO) -->
+<section id="impact" class="py-24 px-4 sm:px-8 lg:px-12 max-w-10xl mx-auto space-y-16">
+    
+    <!-- En-tête de la section -->
+    <div class="text-center space-y-4 max-w-2xl mx-auto" data-aos="fade-up">
+        <span class="text-logoBlue font-bold uppercase tracking-widest text-xs">Impact Réel au Pays</span>
+        <h2 class="text-1xl sm:text-4xl font-extrabold text-logoEmerald title-font">Créé pour faire vivre notre économie locale</h2>
+        <p class="text-logoEmerald/70 text-sm sm:text-base">Allier l'innovation digitale à la tradition solidaire de nos anciens.</p>
+    </div>
 
-  <!-- Conteneur pour l'image -->
-  <div class="w-full mt-6">
-    <img 
-      src="./images/Zem.svg" 
-      alt="Bande dessinée Zem-Tontine : Le travail, l'application et la réussite au Togo" 
-      class="w-full h-auto object-cover"
-      loading="lazy"
-    />
-  </div>
+    <!-- ZONE DE L'ILLUSTRATION BD (Remplaçant l'ancienne grille de cartes) -->
+    <div class="max-w-10xl mx-auto  p-4 sm:p-6 relative w-full rounded-2xl overflow-hidden   border border-logoBlue/10 shadow-xl transition-all duration-300" data-aos="zoom-in" data-aos-duration="800">
+        
+      
+           
+            <img 
+                src="./images/zemm.svg" 
+                alt="Bande dessinée Zem-Tontine : Le travail, l'application et la réussite au Togo" 
+                class="aspect-[16/9] md:aspect-[16/9] "
+                loading="lazy"
+            />
+
+        
+    </div>
+
 </section>
-
 
 
     <!-- SECTION QUESTIONS FRÉQUENTES / ACCORDÉONS DYNAMIQUES -->
@@ -454,7 +461,7 @@
             
             <div class="text-center space-y-4">
                 <span class="text-togoEarth font-bold uppercase tracking-widest text-xs">Clarté & Transparence</span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-logoEmerald title-font">Des réponses honnêtes pour chacun de vous</h2>
+                <h2 class="text-1xl sm:text-4xl font-extrabold text-logoEmerald title-font">Des réponses honnêtes pour chacun de vous</h2>
                 <div class="w-12 h-1.5 bg-logoBlue mx-auto rounded-full"></div>
             </div>
             
@@ -463,33 +470,33 @@
                 
                 <!-- Accordéon 1 -->
                 <div class="bg-white rounded-2xl border border-logoBlue/10 shadow-sm overflow-hidden">
-                    <button onclick="toggleFaq(1)" class="w-full text-left p-6 font-bold text-logoEmerald flex justify-between items-center hover:bg-togoSand/40 transition-colors">
+                    <button onclick="toggleFaq(1)" class="w-full text-left p-6 font-bold text-black flex justify-between items-center hover:bg-togoSand/40 transition-colors">
                         <span class="text-base sm:text-lg">Est-ce que mon argent est vraiment sécurisé au Togo ?</span>
                         <span id="icon-1" class="text-logoBlue text-2xl font-bold transition-transform duration-300">+</span>
                     </button>
-                    <div id="ans-1" class="hidden p-6 pt-0 text-sm sm:text-base text-logoEmerald/70 border-t border-togoSand leading-relaxed">
+                    <div id="ans-1" class="hidden p-6 pt-0 text-sm sm:text-base text-black border-t border-togoSand leading-relaxed">
                         Oui, absolument. Vos fonds ne sont jamais gérés ou détenus par des inconnus. Ils sont directement transférés et sécurisés de manière institutionnelle chez nos grands partenaires de télécommunication agréés (TMoney et Moov Money). Vous conservez l'accès exclusif à votre tontine avec votre propre code secret mobile.
                     </div>
                 </div>
 
                 <!-- Accordéon 2 -->
                 <div class="bg-white rounded-2xl border border-logoBlue/10 shadow-sm overflow-hidden">
-                    <button onclick="toggleFaq(2)" class="w-full text-left p-6 font-bold text-logoEmerald flex justify-between items-center hover:bg-togoSand/40 transition-colors">
+                    <button onclick="toggleFaq(2)" class="w-full text-left p-6 font-bold text-black flex justify-between items-center hover:bg-togoSand/40 transition-colors">
                         <span class="text-base sm:text-lg">Je n'ai pas de smartphone, puis-je quand même participer ?</span>
                         <span id="icon-2" class="text-logoBlue text-2xl font-bold transition-transform duration-300">+</span>
                     </button>
-                    <div id="ans-2" class="hidden p-6 pt-0 text-sm sm:text-base text-logoEmerald/70 border-t border-togoSand leading-relaxed">
+                    <div id="ans-2" class="hidden p-6 pt-0 text-sm sm:text-base text-black border-t border-togoSand leading-relaxed">
                         C'est notre plus grande innovation ! Vous n'avez pas besoin d'un téléphone moderne ou d'Internet pour cotiser. N'importe quel téléphone à touches basique fonctionne : il vous suffit de composer notre code court officiel gratuit <strong class="text-logoBlue font-bold">*567#</strong> pour envoyer vos tontines quotidiennes en quelques secondes.
                     </div>
                 </div>
 
                 <!-- Accordéon 3 -->
                 <div class="bg-white rounded-2xl border border-logoBlue/10 shadow-sm overflow-hidden">
-                    <button onclick="toggleFaq(3)" class="w-full text-left p-6 font-bold text-logoEmerald flex justify-between items-center hover:bg-togoSand/40 transition-colors">
+                    <button onclick="toggleFaq(3)" class="w-full text-left p-6 font-bold text-black flex justify-between items-center hover:bg-togoSand/40 transition-colors">
                         <span class="text-base sm:text-lg">Quels sont les frais ou taux appliqués pour les microcrédits ?</span>
                         <span id="icon-3" class="text-logoBlue text-2xl font-bold transition-transform duration-300">+</span>
                     </button>
-                    <div id="ans-3" class="hidden p-6 pt-0 text-sm sm:text-base text-logoEmerald/70 border-t border-togoSand leading-relaxed">
+                    <div id="ans-3" class="hidden p-6 pt-0 text-sm sm:text-base text-black border-t border-togoSand leading-relaxed">
                         Zem-Tontine est un projet d'inclusion sociale. Les microcrédits de court terme (carburant, pièces, petits stocks) sont accordés avec des frais minimes, voire à <strong class="text-logoBlue font-bold">0% de taux d'intérêt</strong> pour nos membres les plus réguliers (niveau d'or "Akpédjé"). L'ensemble de nos conditions est entièrement transparente et expliquée directement sur notre application et par message.
                     </div>
                 </div>
@@ -499,27 +506,25 @@
     </section>
 
     <!-- PIED DE PAGE & APPEL AUX PARTENAIRES (TERRE CHAUDE & ENGAGEMENT) -->
-    <footer class="bg-logoEmerald text-togoSand pt-20 pb-10 px-4 sm:px-8">
+    <footer class="bg-footer-image  pt-20 pb-10 px-4 sm:px-8">
         <div class="max-w-5xl mx-auto text-center space-y-8 mb-16 relative">
             
-            <!-- Icône d'inspiration togolaise -->
-            <div class="w-16 h-16 bg-togoSafran rounded-organic-1 mx-auto flex items-center justify-center text-3xl shadow-lg shadow-togoSafran/10">
-                🤝
-            </div>
+          
+           
             
             <h2 class="text-3xl sm:text-4xl font-extrabold title-font text-white">Ensemble, bâtissons la liberté financière de nos commerces.</h2>
             <p class="text-togoSand/60 text-sm sm:text-base max-w-xl mx-auto leading-relaxed">
                 Stations-services, mutuelles de santé, assureurs ou professionnels de la microfinance : unissons nos forces pour soutenir l'inclusion sociale de demain.
             </p>
             
-            <a href="mailto:contact@zemtontine.tg" class="inline-flex bg-togoSafran hover:bg-white text-logoEmerald font-extrabold px-8 py-4 rounded-full transition-all duration-300 hover:scale-105 shadow-xl shadow-togoSafran/5">
+            <a href="mailto:contact@zemtontine.tg" class="inline-flex bg-logoBlue hover:bg-white text-white hover:text-logoBlue font-extrabold px-8 py-4 rounded-full transition-all duration-300 hover:scale-105 shadow-xl shadow-logoBlue/15">
                 Devenir Partenaire Officiel
             </a>
         </div>
 
         <div class="max-w-7xl mx-auto pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-xs text-togoSand/40 gap-4 text-center">
-            <p>© 2026 Zem-Tontine. Fait avec ❤️ à Lomé, Togo.</p>
-            <p>Inclusion financière solidaire et innovation technologique au cœur de l'Afrique de l'Ouest.</p>
+            <p>© 2026 Zem-Tontine. Fait  à Lomé, Togo.</p>
+            <p>Inclusion financière solidaire avec Zem-Tontine.</p>
         </div>
     </footer>
 
